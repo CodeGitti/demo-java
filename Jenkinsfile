@@ -26,7 +26,7 @@ pipeline{
           sh 'echo "Deploy started"'
           sh 'sudo cp /home/jenkins/jenkins_slave/workspace/pipeline1/target/demo.war /home/ubuntu/apache-tomcat-9.0.87/webapps/'
           sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/shutdown.sh'
-          sh 'sleep 5'
+          sh 'sleep 6'
           sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/startup.sh'
           sh 'echo "Completed"'
         }
