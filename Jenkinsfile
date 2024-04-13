@@ -24,10 +24,10 @@ pipeline{
       steps{
         script{
           sh 'echo "Deploy started"'
-          sh 'sudo cp /var/lib/jenkins/workspace/pipeline1/target/demo.war /home/ubuntu/apache-tomcat-10.1.19/webapps/'
-          sh 'sudo /home/ubuntu/apache-tomcat-10.1.19/bin/shutdown.sh'
+          sh 'sudo cp /home/jenkins/jenkins_slave/workspace/pipeline1/target/demo.war /home/ubuntu/apache-tomcat-9.0.87/webapps/'
+          sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/shutdown.sh'
           sh 'sleep 5'
-          sh 'sudo /home/ubuntu/apache-tomcat-10.1.19/bin/startup.sh'
+          sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/startup.sh'
           sh 'echo "Completed"'
         }
       }
